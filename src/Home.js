@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <div>
-      <h1>Amol</h1>
-      <h1>Janardhan</h1>
-      <h1>jadhao</h1>
-    </div>
+    console.log(props),
+      <div className="new">
+        <h1>Hello, {props.name} age={props.age} is married : {props.isMarried.toString()} </h1>
+        <h3>Array Elements are : {props.arr}</h3> 
+      </div>
+   
   )
 }
 
