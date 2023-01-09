@@ -1,5 +1,8 @@
 
+
+import { createContext, useState } from 'react';
 import './App.css';
+import CompA from './CompA';
 // import Home from './Home'
 // import Person from './Person'
 // import PropTypes from 'prop-types';  //impt shot cut
@@ -13,12 +16,16 @@ import './App.css';
 // import StyleSheet2 from './StyleSheet2';
 // import USWithObject from './USWithObject';
 // import USWithArraylist from './USWithArraylist';
-import ClassState from './ClassState';
-import FunctionState from './FunctionState';
+// import ClassState from './ClassState';
+// import FunctionState from './FunctionState';
+//import UsedEffect from './UsedEffect';
 
-
+export const NameContext = createContext()
+export const Channelcontext = createContext()
 
 function App() {
+  const [name, setName] = useState("Amol")
+
   // let a = "Amol";
   // let b = "Vaibhav";
   //const friends=["A","B","C"]
@@ -69,9 +76,17 @@ function App() {
     // <StyleSheet2 />
     //<USWithObject/>
     //<USWithArraylist/>
+    // <ClassState/>
+    // <FunctionState/>
+    // <ClassState/>
+    // <FunctionState/>
+    //<UsedEffect/>
     <>
-    <ClassState/>
-    <FunctionState/>
+      <NameContext.Provider value={name} >
+        <Channelcontext.Provider value={'Learning Never End...'}>
+          <CompA />
+        </Channelcontext.Provider>
+      </NameContext.Provider>
 
     </>
   );
