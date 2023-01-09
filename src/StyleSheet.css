@@ -1,0 +1,17 @@
+.font1 {
+    color: blue;
+    background-color: brown;
+}
+
+.font2 {
+    color: rgb(238, 22, 18);
+    background-color: rgb(58, 165, 42);
+    font-size: 100px;
+}
+
+
+.font3 {
+    font-family:'comic sans-ms';
+    text-transform: capitalize;
+    border: 5px solid;
+}
